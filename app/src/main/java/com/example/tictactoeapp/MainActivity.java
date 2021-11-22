@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             gameboard.addView(ll);
         }
+//        btnReset.setOnClickListener(this);// y dis line fuck up whole app O.O
     }
 
     private int winCheck() {
