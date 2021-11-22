@@ -40,6 +40,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    private int winCheck() {
+
+        return 0;
+    }
+
     private Button createButton() {
         Button btn = new Button(MainActivity.this);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
@@ -53,6 +58,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-
+        int test = 0;
     }
 }
