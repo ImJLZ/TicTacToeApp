@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     boolean winnerFound;
     Button[][] buttons = new Button[3][3];
     Button btnReset, btnNewGame;
+    String test;
+    String test2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ll.setLayoutParams(params);
             for(int c = 0; c < 3; c++){
                 buttons[r][c] = createButton();
+                test = "";
+                test = ""+r+c;
+                buttons[r][c].setId(Integer.parseInt(test));//todo how what y id? i cant seem to find it is lost to the void monster
+
                 buttons[r][c].setOnClickListener(this);
                 ll.addView(buttons[r][c]);
             }
@@ -41,7 +47,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private int winCheck() {
-
+//pseudo kode
+//        if (btn[0][0] != "" && btn[0][0] == 1 && btn[0][1] == 1 && btn[0][2] == 1){ // et check af om den øverste linje er af en spiller modhage ved dette er dog der kommer mange if else kan forkortes ved at itterere igennm loop istedet
+//            return btn[0][0];
+//        }
+//        else if (btn[0][0] != "" && btn[0][0] == "2" && btn[0][1] == "2" && btn[0][2] == "2"){
+//            return btn[0][0];
+//        }
         return 0;
     }
 
@@ -58,6 +70,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        // todo find hvilken button blev trykket
         int test = 0;
+        if (winCheck() != 0){
+            winnerFound = true;
+            //do win stuff
+        }
     }
 }
